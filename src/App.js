@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from './star-wars-logo.svg';
 import {Typeahead, AsyncTypeahead} from 'react-bootstrap-typeahead';
+import Header from './Components/Header'
 
 import './App.css';
 
@@ -20,10 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="star-wars-search">
-        <header>
-          <img src={logo} className="star-wars-search__logo" alt="logo" />
-          <h1>Star Wars Character Search</h1>
-        </header>
+        <Header />
         <AsyncTypeahead
           onSearch={query => (
             axios.get(`https://swapi.co/api/people/?search=${query}`)
