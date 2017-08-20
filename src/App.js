@@ -32,13 +32,14 @@ class App extends React.Component {
               console.log('error fetching', error);
             })
           )}
-          onChange={this.state.options}
+          onChange={this._handleChange}
           className="star-wars-search__form"
           labelKey="name"
           placeholder="Search for a Character..."
           renderMenuItemChildren={this._renderMenuItemChildren}
           options={this.state.options}
         />
+        {this._handleChange()}
       </div>
     );
   }
@@ -49,6 +50,18 @@ class App extends React.Component {
         <span>{option.name}</span>
       </div>
     );
+  }
+
+  _handleChange(option) {
+    return (
+      console.log(option),
+      <p>load</p>
+    );
+  }
+
+  _handleChange = e => {
+    const {name} = e.target;
+    console.log(name);
   }
 
 }
