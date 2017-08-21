@@ -16,6 +16,20 @@
   max-width: 400px;
 }
 
+/*Helpers*/
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  word-wrap: normal;
+}
+
 /* Override input module default styles */
 
 input.rbt-input-main,

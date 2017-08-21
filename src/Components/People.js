@@ -8,18 +8,13 @@ class People extends Component {
   }
 
 	render() {
-		
 		return (
-			<div>
-						{ this.props.data.map((person) => { 
-						return <Person name={person.name} age={person.birth_year}/>; }) }
-			</div>
+			<section>
+				{ this.props.data.map((person) => { 
+				return <Person name={person.name} age={person.birth_year}/>; }) }
+			</section>
 		)
-
 	}
-
 }
-
-
 
 export default People;
