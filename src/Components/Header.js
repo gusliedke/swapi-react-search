@@ -4,14 +4,12 @@ import logo from '../star-wars-logo.svg';
 class Header extends Component {
 
 	render() {
-
 		return(
-			<header>
+			<header role="banner">
         <img src={logo} className="star-wars-search__logo" alt="logo" />
         <h1>Star Wars Character Search</h1>
       </header>
 		)
-
 	}
 
 }

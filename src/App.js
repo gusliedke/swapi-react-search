@@ -10,14 +10,12 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       allowNew: false,
       multiple: false,
       options: [],
       person: [],
     };
-
     this._handleChange = this._handleChange.bind(this);
   }
 
@@ -25,16 +23,24 @@ class App extends Component {
     return (
       <div className="star-wars-search">
         <Header />
-        <AsyncTypeahead
-          onSearch={this._handleSearch}
-          onChange={this._handleChange}
-          className="star-wars-search__form"
-          labelKey="name"
-          placeholder="Search for a Character..."
-          renderMenuItemChildren={this._renderMenuItemChildren}
-          options={this.state.options}
-        />
+        <main role="main">
+          <AsyncTypeahead
+            type="text"
+            aria-label="search for star wars characters"
+            aria-required="true"
+            onSearch={this._handleSearch}
+            onChange={this._handleChange}
+            className="star-wars-search__form"
+            labelKey="name"
+            placeholder="Click here and search!"
+            renderMenuItemChildren={this._renderMenuItemChildren}
+            options={this.state.options}
+          />
         <People data={this.state.person} />
+        </main>
+        <footer role="contentinfo">
+          <p>by Gustavo Liedke</p>
+        </footer>
       </div>
     );
   }
