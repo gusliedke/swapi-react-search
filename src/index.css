@@ -5,3 +5,8 @@ body {
   background: black;
   font-family: sans-serif;
 }
+footer {
+  padding: 20px;
+  color: #808080;
+  font-size: 12px;
+}
