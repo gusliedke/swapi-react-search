@@ -3,10 +3,6 @@ import Person from './Person'
 
 class People extends Component {
 
-	static defaultProps = {
-    data: []
-  }
-
 	render() {
 		return (
 			<section>
