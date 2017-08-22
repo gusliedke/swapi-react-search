@@ -46,9 +46,6 @@ class App extends Component {
   }
 
   _handleSearch = query => {
-    if (!query) {
-      return;
-    }
     axios.get(`https://swapi.co/api/people/?search=${query}`)
     .then(response => this.setState({options: response.data.results}))
     .catch(error => {
